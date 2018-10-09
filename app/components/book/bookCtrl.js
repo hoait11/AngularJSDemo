@@ -9,4 +9,10 @@ app.controller('bookCtrl', function($scope, $http) {
     }, function(error){
       console.log(error);
     })
+    $scope.save = function () {
+        console.log('save function');
+    }
+    $scope.cancel = function () {
+        console.log('cancel function');
+    }
 })
