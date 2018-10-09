@@ -6,17 +6,28 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>      
     <script src="lib/js/angular.min.js"></script>
+    <script src="lib/js/angular-route.min.js"></script>
     <script src="app.js"></script>
     <script src="components/book/bookDirective.js"></script>
     <script src="components/book/bookCtrl.js"></script>
+    <script src="route.js"></script>
   </head>
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12" ng-controller="bookCtrl">
-                <book-list></book-list>
-            </div>
+  <body>      
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <a class="navbar-brand" href="#!/">Demo</a>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#!/">Home</a>
+                </li>
+                <li>
+                    <a href="#!about">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container" style="margin-top: 100px">
+        <div class="row" ng-controller="bookCtrl">
+            <ng-view></ng-view>
         </div>
-    </div>
+        </div>
   </body>
 </html>
